@@ -47,7 +47,7 @@ Kunci pengguna diperluas menjadi 26 subkunci 32-bit (tabel S) melalui tiga fase:
     1.	Konversi — kunci bytes dimasukkan ke array word L (little-endian)
     2.	Inisialisasi — tabel S diisi dari P32 dengan step Q32
     3.	Mixing — S dan L dicampur selama 3 × max(26, c) iterasi
-# Fase 3 — mixing
+Fase 3 — mixing
 S[i] = rotl(S[i] + A + B, 3)              # S dirotasi 3 bit (tetap)
 L[j] = rotl(L[j] + A + B, (A + B) % W)    # L dirotasi data-dependent
 
