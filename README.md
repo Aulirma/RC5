@@ -2,6 +2,7 @@
 =============================================================================================================================
 RC5 Cipher — Python Implementation
 Implementasi algoritma kriptografi RC5-32/12/b menggunakan Python murni (tanpa library eksternal). RC5 adalah block cipher simetris yang dirancang oleh Ronald L. Rivest (1994), dengan ciri khas data-dependent rotation — jumlah rotasi bit ditentukan oleh nilai data yang sedang diproses.
+
 -----------------------------------------------------------------------------------------------------------------------------
 
 Spesifikasi Algoritma
@@ -10,7 +11,8 @@ W	        32 bit	    Ukuran word; satu blok = dua word = 8 byte
 R	        12	        Jumlah putaran enkripsi/dekripsi
 b	        variabel	  Panjang kunci dalam byte (ditentukan saat runtime)
 P32	      0xB7E15163	Konstanta dari bilangan e (Euler)
-Q32	      0x9E3779B9	Konstanta dari golden ratio φ
+Q32	      0x9E3779B9	Konstanta dari golden ratio 
+
 -----------------------------------------------------------------------------------------------------------------------------
 
 Struktur Program
@@ -23,6 +25,7 @@ rc5.py
 ├── encrypt(plain, S)   — enkripsi blok 8 byte
 ├── decrypt(cipher, S)  — dekripsi blok 8 byte
 └── __main__            — antarmuka CLI interaktif
+
 -----------------------------------------------------------------------------------------------------------------------------
 
 Cara Penggunaan
@@ -35,6 +38,7 @@ Masukkan kunci      : <kunci-rahasia>
 Pilih mode [e=enkripsi / d=dekripsi] : e
 Masukkan plaintext  : <pesan>
 Ciphertext : <output>
+
 -----------------------------------------------------------------------------------------------------------------------------
 
 Cara Kerja
